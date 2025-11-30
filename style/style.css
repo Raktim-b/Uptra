@@ -624,6 +624,9 @@ a {
   .title3 {
     font-size: 18px;
   }
+  .cursor {
+    display: none;
+  }
   /* Banner Section */
   .swiper-slide {
     min-height: 80vh;
@@ -889,6 +892,7 @@ a {
   .ftr-left {
     max-width: 297px;
     margin: 0 auto;
+    text-align: center;
   }
   .ftr-logo {
     margin: 0 auto;
