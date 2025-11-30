@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap Css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Aos Css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper Css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- Font Awsome Css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <div class="cursor"></div>
+    <div id="luxy" class="page-wrpr">
+      <!-- Header Section -->
+      <header class="hdr-sec">
+        <nav class="navbar navbar-expand-xl">
+          <div class="container">
+            <div class="nav-logo">
+              <a class="navbar-brand" href="index.html">
+                <img src="./assets/Nav-logo.png" alt="" />
+              </a>
+            </div>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              id="offcanvasExample"
+              aria-labelledby="offcanvasExampleLabel"
+            >
+              <div class="offcanvas-header ms-auto mt-3">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                ></button>
+              </div>
+              <ul class="navbar-nav ms-xl-auto text-center">
+                <li class="nav-item">
+                  <a class="nav-link active" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Freelancers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Post A Job</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Contact Us</a>
+                </li>
+              </ul>
+
+              <div
+                class="d-flex flex-column flex-xl-row align-items-center nav-btn"
+              >
+                <a href="" class="btn btn-primary d-flex align-items-center">
+                  Subscribe as Freelancer
+                  <svg
+                    width="24"
+                    height="8"
+                    viewBox="0 0 24 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L4.37114e-08 3.18198L0 3.68198L-4.37114e-08 4.18198L23.5 4.18198L23.5 3.68198Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+
+                <div class="dropdown">
+                  <a
+                    class="btn btn-secondary dropdown-toggle d-flex align-items-center"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 0C5.38312 0 0 5.3835 0 12C0 18.6165 5.38312 24 12 24C18.6165 24 24 18.6169 24 12C24 5.38312 18.6165 0 12 0ZM12 1.5C17.7896 1.5 22.5 6.21 22.5 12C22.5 14.1011 21.8775 16.0579 20.8106 17.7011C20.5385 16.3834 19.9757 15.143 19.1632 14.0705C18.3508 12.9979 17.3092 12.1201 16.1145 11.5013C16.8496 10.577 17.2499 9.43095 17.25 8.25C17.25 5.355 14.895 3 12 3C9.105 3 6.75 5.355 6.75 8.25C6.75011 9.43095 7.15037 10.577 7.8855 11.5013C5.46075 12.7522 3.735 15.0484 3.18937 17.7011C2.08527 16.0048 1.49831 14.024 1.5 12C1.5 6.21 6.21 1.5 12 1.5ZM8.25 8.25C8.25 6.18225 9.93225 4.5 12 4.5C14.0677 4.5 15.75 6.18225 15.75 8.25C15.75 10.3177 14.0677 12 12 12C9.93225 12 8.25 10.3177 8.25 8.25ZM12 22.5C9.0675 22.5 6.41325 21.2899 4.50638 19.3447C4.56787 16.3991 6.36825 13.7505 9.06562 12.6015C9.93163 13.1883 10.9539 13.5013 12 13.5C13.086 13.5 14.0963 13.1685 14.9344 12.6015C17.6318 13.7505 19.4321 16.3991 19.4936 19.3447C17.5868 21.2899 14.9325 22.5 12 22.5Z"
+                        fill="#3F543E"
+                      />
+                    </svg>
+
+                    Log in
+                  </a>
+
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="">Sign In</a></li>
+                    <li><a class="dropdown-item" href="">Sign Up</a></li>
+                    <li><a class="dropdown-item" href="">My Profile</a></li>
+                    <li><a class="dropdown-item" href="">Help</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Banner Section -->
+        <section class="banner-sec">
+          <div class="container">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">
+                  <div
+                    class="banner-cntn"
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="1000"
+                  >
+                    <div class="heading-top">
+                      The Best Way to showcase your Projects
+                      <svg
+                        width="24"
+                        height="8"
+                        viewBox="0 0 24 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L4.37114e-08 3.18198L0 3.68198L-4.37114e-08 4.18198L23.5 4.18198L23.5 3.68198Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <h1 class="title1">Forging the Future</h1>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type
+                    </p>
+                    <div class="banner-btn">
+                      <a href="" class="btn-secondary btn"
+                        >Post your Job Now
+
+                        <svg
+                          width="24"
+                          height="8"
+                          viewBox="0 0 24 8"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M23.8536 4.03556C24.0488 3.8403 24.0488 3.52372 23.8536 3.32845L20.6716 0.146473C20.4763 -0.0487895 20.1597 -0.0487896 19.9645 0.146473C19.7692 0.341735 19.7692 0.658317 19.9645 0.853579L22.7929 3.68201L19.9645 6.51043C19.7692 6.7057 19.7692 7.02228 19.9645 7.21754C20.1597 7.4128 20.4763 7.4128 20.6716 7.21754L23.8536 4.03556ZM23.5 3.68201L23.5 3.18201L4.37114e-08 3.182L0 3.682L-4.37114e-08 4.182L23.5 4.18201L23.5 3.68201Z"
+                            fill="#3F543E"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide2">
+                  <div class="banner-cntn" data-aos="fade-up">
+                    <div class="heading-top">
+                      Empower Your Vision With Creativity
+                      <svg
+                        width="24"
+                        height="8"
+                        viewBox="0 0 24 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L0 3.18198V4.18198H23.5V3.68198Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <h1 class="title1">Craft Your Vision</h1>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type
+                    </p>
+                    <div class="banner-btn">
+                      <a href="" class="btn-secondary btn"
+                        >Post your Job Now
+
+                        <svg
+                          width="24"
+                          height="8"
+                          viewBox="0 0 24 8"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M23.8536 4.03556C24.0488 3.8403 24.0488 3.52372 23.8536 3.32845L20.6716 0.146473C20.4763 -0.0487895 20.1597 -0.0487896 19.9645 0.146473C19.7692 0.341735 19.7692 0.658317 19.9645 0.853579L22.7929 3.68201L19.9645 6.51043C19.7692 6.7057 19.7692 7.02228 19.9645 7.21754C20.1597 7.4128 20.4763 7.4128 20.6716 7.21754L23.8536 4.03556ZM23.5 3.68201L23.5 3.18201L4.37114e-08 3.182L0 3.682L-4.37114e-08 4.182L23.5 4.18201L23.5 3.68201Z"
+                            fill="#3F543E"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide3">
+                  <div class="banner-cntn" data-aos-easing="linear">
+                    <div class="heading-top">
+                      Unlock Opportunities with the Right Skills
+                      <svg
+                        width="24"
+                        height="8"
+                        viewBox="0 0 24 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L4.37114e-08 3.18198L0 3.68198L-4.37114e-08 4.18198L23.5 4.18198L23.5 3.68198Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <h1 class="title1">Innovation Ahead</h1>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type
+                    </p>
+                    <div class="banner-btn">
+                      <a href="" class="btn-secondary btn"
+                        >Post your Job Now
+
+                        <svg
+                          width="24"
+                          height="8"
+                          viewBox="0 0 24 8"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M23.8536 4.03556C24.0488 3.8403 24.0488 3.52372 23.8536 3.32845L20.6716 0.146473C20.4763 -0.0487895 20.1597 -0.0487896 19.9645 0.146473C19.7692 0.341735 19.7692 0.658317 19.9645 0.853579L22.7929 3.68201L19.9645 6.51043C19.7692 6.7057 19.7692 7.02228 19.9645 7.21754C20.1597 7.4128 20.4763 7.4128 20.6716 7.21754L23.8536 4.03556ZM23.5 3.68201L23.5 3.18201L4.37114e-08 3.182L0 3.682L-4.37114e-08 4.182L23.5 4.18201L23.5 3.68201Z"
+                            fill="#3F543E"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide slide4">
+                  <div class="banner-cntn" data-aos-duration="1000">
+                    <div class="heading-top">
+                      Connect, Collaborate & Bring Ideas to Life
+                      <svg
+                        width="24"
+                        height="8"
+                        viewBox="0 0 24 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L4.37114e-08 3.18198L0 3.68198L-4.37114e-08 4.18198L23.5 4.18198L23.5 3.68198Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <h1 class="title1">Shaping Tomorrow</h1>
+
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type
+                    </p>
+                    <div class="banner-btn">
+                      <a href="" class="btn-secondary btn"
+                        >Post your Job Now
+
+                        <svg
+                          width="24"
+                          height="8"
+                          viewBox="0 0 24 8"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M23.8536 4.03556C24.0488 3.8403 24.0488 3.52372 23.8536 3.32845L20.6716 0.146473C20.4763 -0.0487895 20.1597 -0.0487896 19.9645 0.146473C19.7692 0.341735 19.7692 0.658317 19.9645 0.853579L22.7929 3.68201L19.9645 6.51043C19.7692 6.7057 19.7692 7.02228 19.9645 7.21754C20.1597 7.4128 20.4763 7.4128 20.6716 7.21754L23.8536 4.03556ZM23.5 3.68201L23.5 3.18201L4.37114e-08 3.182L0 3.682L-4.37114e-08 4.182L23.5 4.18201L23.5 3.68201Z"
+                            fill="#3F543E"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next">
+                <svg
+                  width="27"
+                  height="8"
+                  viewBox="0 0 27 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M26.8536 4.03553C27.0488 3.84027 27.0488 3.52369 26.8536 3.32842L23.6716 0.146442C23.4763 -0.04882 23.1597 -0.0488201 22.9645 0.146442C22.7692 0.341704 22.7692 0.658287 22.9645 0.853549L25.7929 3.68198L22.9645 6.5104C22.7692 6.70567 22.7692 7.02225 22.9645 7.21751C23.1597 7.41277 23.4763 7.41277 23.6716 7.21751L26.8536 4.03553ZM26.5 3.68198L26.5 3.18198L4.37114e-08 3.18197L0 3.68197L-4.37114e-08 4.18197L26.5 4.18198L26.5 3.68198Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="swiper-button-prev">
+                <svg
+                  width="2o.5"
+                  height="8"
+                  viewBox="0 0 27 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.146447 3.32842C-0.0488155 3.52368 -0.0488156 3.84027 0.146447 4.03553L3.32843 7.21751C3.52369 7.41277 3.84027 7.41277 4.03553 7.21751C4.2308 7.02225 4.2308 6.70567 4.03553 6.5104L1.20711 3.68198L4.03553 0.85355C4.2308 0.658288 4.2308 0.341705 4.03553 0.146443C3.84027 -0.0488192 3.52369 -0.0488193 3.32843 0.146443L0.146447 3.32842ZM0.5 3.68198L0.5 4.18198L27 4.18198L27 3.68198L27 3.18198L0.5 3.18198L0.5 3.68198Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- About Section -->
+        <section class="about-sec" data-aos="fade-up" data-aos-delay="200">
+          <div class="container">
+            <div class="container1 mx-auto">
+              <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                  <div class="about-left d-flex justify-content-center">
+                    <div class="about-left-img">
+                      <img src="./assets/About-img1.png" alt="" />
+                    </div>
+                    <div class="about-right-img">
+                      <img src="./assets/About-img2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="about-cntn">
+                    <div class="heading-top">
+                      Welcome to
+                      <svg
+                        width="24"
+                        height="8"
+                        viewBox="0 0 24 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L4.37114e-08 3.18198L0 3.68198L-4.37114e-08 4.18198L23.5 4.18198L23.5 3.68198Z"
+                          fill="#3F543E"
+                        />
+                      </svg>
+                    </div>
+                    <h2 class="title2">About Uptra</h2>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type
+                    </p>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries.
+                    </p>
+                    <a href="" class="btn btn-primary">
+                      About Us
+                      <svg
+                        width="24"
+                        height="8"
+                        viewBox="0 0 24 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L4.37114e-08 3.18198L0 3.68198L-4.37114e-08 4.18198L23.5 4.18198L23.5 3.68198Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Join Us Section -->
+        <section class="join-sec">
+          <div class="container">
+            <div class="container1 mx-auto">
+              <div
+                class="join-hdr d-flex flex-column flex-md-row justify-content-between"
+                data-aos="fade-up"
+              >
+                <div class="join-hdr-left">
+                  <div class="heading-top">
+                    Our Services
+                    <svg
+                      width="24"
+                      height="8"
+                      viewBox="0 0 24 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L4.37114e-08 3.18198L0 3.68198L-4.37114e-08 4.18198L23.5 4.18198L23.5 3.68198Z"
+                        fill="#3F543E"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="title2">Why Join Us</h2>
+                </div>
+                <div class="join-hdr-right">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container2 mx-auto">
+              <div
+                class="swiper mySwiper2"
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide join-us-slider">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="./assets/Join-us-img1.png" alt="" />
+                      </div>
+
+                      <svg
+                        width="40"
+                        height="50"
+                        viewBox="0 0 40 50"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M25.0793 13.0219C25.0793 10.2174 22.8058 7.94391 20.0013 7.94391C17.1968 7.94391 14.9234 10.2174 14.9234 13.0219C14.9234 15.8264 17.1968 18.0999 20.0013 18.0999C22.8058 18.0999 25.0793 15.8264 25.0793 13.0219Z"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M22.5404 7.94385V0.977943H17.4624V7.94385"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.0004 18.0994L8.02778 42.6066C7.3649 43.9635 5.72755 44.5261 4.37076 43.8632C3.01386 43.2004 2.45128 41.5631 3.11415 40.2062L15.3728 15.1134"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M1.7402 49.0215L4.35946 43.858"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M27.0844 20.1411L24.628 15.113"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.0004 18.0993L30.7728 40.1498C31.4357 41.5067 33.073 42.0693 34.4298 41.4064C35.7866 40.7436 36.3492 39.1063 35.6864 37.7494L30.9426 28.0393"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M38.2606 49.0215L34.4298 41.4697"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.6051 31.8362H26.3977"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M32.7976 31.8362H38.7508"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7.20314 31.8362H1.25"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.0014 29.1346V34.5381"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M31.073 43.8467C31.073 45.0332 32.0349 45.9951 33.2214 45.9951C34.4079 45.9951 35.3697 45.0332 35.3697 43.8467C35.3697 42.6603 34.4079 41.6984 33.2214 41.6984C32.0349 41.6984 31.073 42.6603 31.073 43.8467Z"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <h3 class="title3">Architectural</h3>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide join-us-slider ms-0">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="./assets/Join-us-img2.png" alt="" />
+                      </div>
+
+                      <svg
+                        width="48"
+                        height="46"
+                        viewBox="0 0 48 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.7633 41.0236H11.22L10.9153 14.7663C10.9101 14.4248 10.7855 14.096 10.5633 13.8367L17.4113 13.7573C18.3837 13.7717 19.1308 12.7202 18.7927 11.8066L15.1302 1.0026C15.0302 0.707598 14.8394 0.451787 14.5852 0.271733C14.331 0.0916788 14.0264 -0.00339861 13.7149 9.2829e-05L4.87399 0.102853C4.56242 0.106538 4.26001 0.208658 4.00999 0.394606C3.75997 0.580554 3.57516 0.840804 3.482 1.13813L0.0717135 12.0242C-0.243359 12.9441 0.524686 13.9799 1.49766 13.9418L8.29283 13.863C8.08584 14.1205 7.95827 14.4441 7.96241 14.8002L8.26685 41.0236H5.30806C3.363 41.072 3.35916 43.9272 5.30806 43.9765H13.7636C15.7081 43.9284 15.7125 41.0732 13.7633 41.0236ZM5.97895 3.04363L12.6773 2.96567L15.3425 10.828L3.49765 10.9656L5.97895 3.04363ZM18.3267 24.3626C18.3639 26.3035 21.2439 26.3044 21.2796 24.3626V20.2049C21.2796 19.0261 22.2428 18.067 23.4267 18.067H37.9224C39.1062 18.067 40.0691 19.0261 40.0691 20.2049V24.3626C40.0691 25.1781 40.73 25.839 41.5455 25.839C42.3611 25.839 43.022 25.1781 43.022 24.3626V20.2049C43.022 17.3979 40.7344 15.1141 37.9224 15.1141H23.4267C20.6146 15.1141 18.3267 17.3979 18.3267 20.2049V24.3626Z"
+                          fill="#3F543E"
+                        />
+                        <path
+                          d="M41.5462 25.9597C38.2726 25.9497 35.6723 28.7334 35.8421 31.9851H25.5076C25.6177 24.2279 14.4139 23.9084 14.0991 31.6538V38.2818C14.0991 39.7603 15.3033 40.9633 16.7836 40.9633H17.7232V43.1021C17.7232 43.9177 18.384 44.5786 19.1996 44.5786C20.0152 44.5786 20.6761 43.9177 20.6761 43.1021V40.9633H40.6739V43.7045C40.6739 44.5201 41.3347 45.1809 42.1503 45.1809C42.9659 45.1809 43.6268 44.5201 43.6268 43.7045V40.9633H44.5664C46.0467 40.9633 47.2508 39.7603 47.2508 38.2818V31.6538C47.2508 28.514 44.6919 25.9597 41.5468 25.9597H41.5462ZM44.2974 38.0108H17.0517V31.6541C17.0517 30.1425 18.286 28.9129 19.8029 28.9129C21.3198 28.9129 22.5541 30.1425 22.5541 31.6541V33.4618C22.5541 33.8534 22.7097 34.229 22.9865 34.5058C23.2634 34.7827 23.639 34.9383 24.0306 34.9383H37.3179C37.7095 34.9383 38.085 34.7827 38.3619 34.5058C38.6388 34.229 38.7944 33.8534 38.7944 33.4618V31.6541C38.7944 30.1425 40.0287 28.9129 41.5456 28.9129C43.0625 28.9129 44.2968 30.1425 44.2968 31.6541V38.0108H44.2974Z"
+                          fill="#3F543E"
+                        />
+                      </svg>
+
+                      <h3 class="title3">Interior Design</h3>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide join-us-slider ms-0">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="./assets/Join-us-img3.png" alt="" />
+                      </div>
+
+                      <svg
+                        width="48"
+                        height="53"
+                        viewBox="0 0 48 53"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M43.0303 6.77729H42.412C43.5907 4.85832 43.1554 2.28201 41.2637 0.878484C39.2255 -0.633649 36.329 -0.146909 34.9065 1.97879L31.6956 6.77739H4.11185C1.84457 6.77739 0 8.62196 0 10.8892V37.1779C0 39.4452 1.84457 41.2898 4.11185 41.2898H20.0835L18.8767 46.3584H16.2721C14.5746 46.3584 13.1936 47.7393 13.1936 49.4368V50.0796H9.98277C9.4206 50.0796 8.9649 50.5354 8.9649 51.0975C8.9649 51.6595 9.4206 52.1153 9.98277 52.1153H37.1595C37.7217 52.1153 38.1774 51.6595 38.1774 51.0975C38.1774 50.5354 37.7217 50.0796 37.1595 50.0796H33.9487V49.4368C33.9487 47.7393 32.5677 46.3584 30.8702 46.3584H28.2656L27.0588 41.2898H43.0304C45.2977 41.2898 47.1423 39.4452 47.1423 37.1779V10.8891C47.1423 8.62186 45.2977 6.77729 43.0303 6.77729ZM28.4462 24.6712C26.8548 25.7852 23.8734 24.2709 21.0262 25.7902C20.3316 22.1814 20.7695 18.7873 24.3855 18.0382C24.8528 17.9408 25.3559 17.8967 25.7842 17.9053L29.4664 20.6373C30.0007 22.1914 29.8002 23.7234 28.4462 24.6712ZM29.472 13.7609L32.3533 15.8986L30.1375 18.6001L27.5289 16.6647L29.472 13.7609ZM36.5985 3.11096C37.3694 1.95864 38.9417 1.69053 40.0508 2.51347C41.1602 3.33651 41.3589 4.91888 40.4798 5.99079L33.6457 14.3229L30.6053 12.0671L36.5985 3.11096ZM31.9129 49.4368V50.0796H15.2293V49.4368C15.2293 48.8619 15.6971 48.3941 16.2721 48.3941H30.8701C31.4451 48.3941 31.9129 48.8619 31.9129 49.4368ZM26.1729 46.3584H20.9693L22.1761 41.2898H24.9661L26.1729 46.3584ZM45.1066 37.1779C45.1066 38.3227 44.1752 39.2541 43.0304 39.2541H4.11195C2.96716 39.2541 2.03582 38.3227 2.03582 37.1779V32.4113H4.94446C5.50662 32.4113 5.96232 31.9555 5.96232 31.3934C5.96232 30.8314 5.50662 30.3756 4.94446 30.3756H2.03562V10.8891C2.03562 9.74435 2.96696 8.81301 4.11175 8.81301H30.3334L25.6123 15.8682C23.6176 15.8862 21.6262 16.5811 20.3225 18.103C18.5485 20.1739 18.2368 23.4278 19.3961 27.7742C19.5943 28.5175 20.5217 28.7837 21.0828 28.2477C23.7147 25.7329 26.9926 28.476 29.928 26.1001C31.7199 24.6497 32.1439 22.3438 31.4683 20.1876L40.7978 8.81301H43.0302C44.175 8.81301 45.1064 9.74435 45.1064 10.8891V30.3755H13.0871C12.525 30.3755 12.0693 30.8313 12.0693 31.3933C12.0693 31.9554 12.525 32.4112 13.0871 32.4112H45.1066V37.1779Z"
+                          fill="#3F543E"
+                        />
+                        <path
+                          d="M8.81935 30.3949C8.5884 30.4409 8.38056 30.5655 8.23131 30.7477C8.08206 30.9298 8.00065 31.1581 8.00098 31.3936C8.00098 32.0302 8.5831 32.5178 9.21734 32.3911C9.48201 32.3383 9.71486 32.1825 9.8647 31.958C10.0145 31.7335 10.0691 31.4587 10.0164 31.1941C9.90309 30.6373 9.363 30.2855 8.81935 30.3949Z"
+                          fill="#3F543E"
+                        />
+                      </svg>
+
+                      <h3 class="title3">Graphic Design</h3>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide join-us-slider">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="./assets/Join-us-img1.png" alt="" />
+                      </div>
+
+                      <svg
+                        width="40"
+                        height="50"
+                        viewBox="0 0 40 50"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M25.0793 13.0219C25.0793 10.2174 22.8058 7.94391 20.0013 7.94391C17.1968 7.94391 14.9234 10.2174 14.9234 13.0219C14.9234 15.8264 17.1968 18.0999 20.0013 18.0999C22.8058 18.0999 25.0793 15.8264 25.0793 13.0219Z"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M22.5404 7.94385V0.977943H17.4624V7.94385"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.0004 18.0994L8.02778 42.6066C7.3649 43.9635 5.72755 44.5261 4.37076 43.8632C3.01386 43.2004 2.45128 41.5631 3.11415 40.2062L15.3728 15.1134"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M1.7402 49.0215L4.35946 43.858"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M27.0844 20.1411L24.628 15.113"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.0004 18.0993L30.7728 40.1498C31.4357 41.5067 33.073 42.0693 34.4298 41.4064C35.7866 40.7436 36.3492 39.1063 35.6864 37.7494L30.9426 28.0393"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M38.2606 49.0215L34.4298 41.4697"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.6051 31.8362H26.3977"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M32.7976 31.8362H38.7508"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7.20314 31.8362H1.25"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.0014 29.1346V34.5381"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M31.073 43.8467C31.073 45.0332 32.0349 45.9951 33.2214 45.9951C34.4079 45.9951 35.3697 45.0332 35.3697 43.8467C35.3697 42.6603 34.4079 41.6984 33.2214 41.6984C32.0349 41.6984 31.073 42.6603 31.073 43.8467Z"
+                          stroke="#3F543E"
+                          stroke-width="2.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <h3 class="title3">Architectural</h3>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide join-us-slider ms-0">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="./assets/Join-us-img2.png" alt="" />
+                      </div>
+
+                      <svg
+                        width="48"
+                        height="46"
+                        viewBox="0 0 48 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.7633 41.0236H11.22L10.9153 14.7663C10.9101 14.4248 10.7855 14.096 10.5633 13.8367L17.4113 13.7573C18.3837 13.7717 19.1308 12.7202 18.7927 11.8066L15.1302 1.0026C15.0302 0.707598 14.8394 0.451787 14.5852 0.271733C14.331 0.0916788 14.0264 -0.00339861 13.7149 9.2829e-05L4.87399 0.102853C4.56242 0.106538 4.26001 0.208658 4.00999 0.394606C3.75997 0.580554 3.57516 0.840804 3.482 1.13813L0.0717135 12.0242C-0.243359 12.9441 0.524686 13.9799 1.49766 13.9418L8.29283 13.863C8.08584 14.1205 7.95827 14.4441 7.96241 14.8002L8.26685 41.0236H5.30806C3.363 41.072 3.35916 43.9272 5.30806 43.9765H13.7636C15.7081 43.9284 15.7125 41.0732 13.7633 41.0236ZM5.97895 3.04363L12.6773 2.96567L15.3425 10.828L3.49765 10.9656L5.97895 3.04363ZM18.3267 24.3626C18.3639 26.3035 21.2439 26.3044 21.2796 24.3626V20.2049C21.2796 19.0261 22.2428 18.067 23.4267 18.067H37.9224C39.1062 18.067 40.0691 19.0261 40.0691 20.2049V24.3626C40.0691 25.1781 40.73 25.839 41.5455 25.839C42.3611 25.839 43.022 25.1781 43.022 24.3626V20.2049C43.022 17.3979 40.7344 15.1141 37.9224 15.1141H23.4267C20.6146 15.1141 18.3267 17.3979 18.3267 20.2049V24.3626Z"
+                          fill="#3F543E"
+                        />
+                        <path
+                          d="M41.5462 25.9597C38.2726 25.9497 35.6723 28.7334 35.8421 31.9851H25.5076C25.6177 24.2279 14.4139 23.9084 14.0991 31.6538V38.2818C14.0991 39.7603 15.3033 40.9633 16.7836 40.9633H17.7232V43.1021C17.7232 43.9177 18.384 44.5786 19.1996 44.5786C20.0152 44.5786 20.6761 43.9177 20.6761 43.1021V40.9633H40.6739V43.7045C40.6739 44.5201 41.3347 45.1809 42.1503 45.1809C42.9659 45.1809 43.6268 44.5201 43.6268 43.7045V40.9633H44.5664C46.0467 40.9633 47.2508 39.7603 47.2508 38.2818V31.6538C47.2508 28.514 44.6919 25.9597 41.5468 25.9597H41.5462ZM44.2974 38.0108H17.0517V31.6541C17.0517 30.1425 18.286 28.9129 19.8029 28.9129C21.3198 28.9129 22.5541 30.1425 22.5541 31.6541V33.4618C22.5541 33.8534 22.7097 34.229 22.9865 34.5058C23.2634 34.7827 23.639 34.9383 24.0306 34.9383H37.3179C37.7095 34.9383 38.085 34.7827 38.3619 34.5058C38.6388 34.229 38.7944 33.8534 38.7944 33.4618V31.6541C38.7944 30.1425 40.0287 28.9129 41.5456 28.9129C43.0625 28.9129 44.2968 30.1425 44.2968 31.6541V38.0108H44.2974Z"
+                          fill="#3F543E"
+                        />
+                      </svg>
+
+                      <h3 class="title3">Interior Design</h3>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide join-us-slider ms-0">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="./assets/Join-us-img3.png" alt="" />
+                      </div>
+
+                      <svg
+                        width="48"
+                        height="53"
+                        viewBox="0 0 48 53"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M43.0303 6.77729H42.412C43.5907 4.85832 43.1554 2.28201 41.2637 0.878484C39.2255 -0.633649 36.329 -0.146909 34.9065 1.97879L31.6956 6.77739H4.11185C1.84457 6.77739 0 8.62196 0 10.8892V37.1779C0 39.4452 1.84457 41.2898 4.11185 41.2898H20.0835L18.8767 46.3584H16.2721C14.5746 46.3584 13.1936 47.7393 13.1936 49.4368V50.0796H9.98277C9.4206 50.0796 8.9649 50.5354 8.9649 51.0975C8.9649 51.6595 9.4206 52.1153 9.98277 52.1153H37.1595C37.7217 52.1153 38.1774 51.6595 38.1774 51.0975C38.1774 50.5354 37.7217 50.0796 37.1595 50.0796H33.9487V49.4368C33.9487 47.7393 32.5677 46.3584 30.8702 46.3584H28.2656L27.0588 41.2898H43.0304C45.2977 41.2898 47.1423 39.4452 47.1423 37.1779V10.8891C47.1423 8.62186 45.2977 6.77729 43.0303 6.77729ZM28.4462 24.6712C26.8548 25.7852 23.8734 24.2709 21.0262 25.7902C20.3316 22.1814 20.7695 18.7873 24.3855 18.0382C24.8528 17.9408 25.3559 17.8967 25.7842 17.9053L29.4664 20.6373C30.0007 22.1914 29.8002 23.7234 28.4462 24.6712ZM29.472 13.7609L32.3533 15.8986L30.1375 18.6001L27.5289 16.6647L29.472 13.7609ZM36.5985 3.11096C37.3694 1.95864 38.9417 1.69053 40.0508 2.51347C41.1602 3.33651 41.3589 4.91888 40.4798 5.99079L33.6457 14.3229L30.6053 12.0671L36.5985 3.11096ZM31.9129 49.4368V50.0796H15.2293V49.4368C15.2293 48.8619 15.6971 48.3941 16.2721 48.3941H30.8701C31.4451 48.3941 31.9129 48.8619 31.9129 49.4368ZM26.1729 46.3584H20.9693L22.1761 41.2898H24.9661L26.1729 46.3584ZM45.1066 37.1779C45.1066 38.3227 44.1752 39.2541 43.0304 39.2541H4.11195C2.96716 39.2541 2.03582 38.3227 2.03582 37.1779V32.4113H4.94446C5.50662 32.4113 5.96232 31.9555 5.96232 31.3934C5.96232 30.8314 5.50662 30.3756 4.94446 30.3756H2.03562V10.8891C2.03562 9.74435 2.96696 8.81301 4.11175 8.81301H30.3334L25.6123 15.8682C23.6176 15.8862 21.6262 16.5811 20.3225 18.103C18.5485 20.1739 18.2368 23.4278 19.3961 27.7742C19.5943 28.5175 20.5217 28.7837 21.0828 28.2477C23.7147 25.7329 26.9926 28.476 29.928 26.1001C31.7199 24.6497 32.1439 22.3438 31.4683 20.1876L40.7978 8.81301H43.0302C44.175 8.81301 45.1064 9.74435 45.1064 10.8891V30.3755H13.0871C12.525 30.3755 12.0693 30.8313 12.0693 31.3933C12.0693 31.9554 12.525 32.4112 13.0871 32.4112H45.1066V37.1779Z"
+                          fill="#3F543E"
+                        />
+                        <path
+                          d="M8.81935 30.3949C8.5884 30.4409 8.38056 30.5655 8.23131 30.7477C8.08206 30.9298 8.00065 31.1581 8.00098 31.3936C8.00098 32.0302 8.5831 32.5178 9.21734 32.3911C9.48201 32.3383 9.71486 32.1825 9.8647 31.958C10.0145 31.7335 10.0691 31.4587 10.0164 31.1941C9.90309 30.6373 9.363 30.2855 8.81935 30.3949Z"
+                          fill="#3F543E"
+                        />
+                      </svg>
+
+                      <h3 class="title3">Graphic Design</h3>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="join-btn text-center">
+                <a href="" class="btn btn-primary">
+                  Get Started
+                  <svg
+                    width="24"
+                    height="8"
+                    viewBox="0 0 24 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L4.37114e-08 3.18198L0 3.68198L-4.37114e-08 4.18198L23.5 4.18198L23.5 3.68198Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Testimonial Section -->
+        <section class="testi-sec" data-aos="fade-up">
+          <div class="container">
+            <div class="tst-hdr text-center">
+              <div class="heading-top">
+                <svg
+                  width="30"
+                  height="8"
+                  viewBox="0 0 30 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.146447 3.32833C-0.0488155 3.52359 -0.0488155 3.84018 0.146447 4.03544L3.32843 7.21742C3.52369 7.41268 3.84027 7.41268 4.03553 7.21742C4.2308 7.02216 4.2308 6.70557 4.03553 6.51031L1.20711 3.68188L4.03553 0.853458C4.2308 0.658195 4.2308 0.341613 4.03553 0.146351C3.84027 -0.0489113 3.52369 -0.0489113 3.32843 0.146351L0.146447 3.32833ZM0.5 3.68188L0.5 4.18188L30 4.18188V3.68188V3.18188L0.5 3.18188L0.5 3.68188Z"
+                    fill="#3F543E"
+                  />
+                </svg>
+
+                <span>What our Customers Say</span>
+                <svg
+                  width="24"
+                  height="8"
+                  viewBox="0 0 24 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L4.37114e-08 3.18198L0 3.68198L-4.37114e-08 4.18198L23.5 4.18198L23.5 3.68198Z"
+                    fill="#3F543E"
+                  />
+                </svg>
+              </div>
+              <h2 class="title2">Client Testimonials</h2>
+            </div>
+            <div class="tst-swiper">
+              <div class="swiper mySwiper3">
+                <div class="swiper-wrapper swiper-wrpr3">
+                  <div class="swiper-slide testi-slide">
+                    <div class="test-img">
+                      <img src="./assets/Testi-img3.png" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide testi-slide">
+                    <div class="test-img">
+                      <img src="./assets/Testi-img4.png" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide testi-slide">
+                    <div class="test-img">
+                      <img src="./assets/Testi-img5.png" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide testi-slide">
+                    <div class="test-img">
+                      <img src="./assets/Testi-img2.png" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide testi-slide">
+                    <div class="test-img">
+                      <img src="./assets/Testi-img1.png" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide testi-slide">
+                    <div class="test-img">
+                      <img src="./assets/Testi-img1.png" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide testi-slide">
+                    <div class="test-img">
+                      <img src="./assets/Testi-img2.png" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide testi-slide">
+                    <div class="test-img">
+                      <img src="./assets/Testi-img3.png" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide testi-slide">
+                    <div class="test-img">
+                      <img src="./assets/Testi-img4.png" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide testi-slide">
+                    <div class="test-img">
+                      <img src="./assets/Testi-img5.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div thumbsSlider="" class="swiper mySwiper4">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide tst-sec-slide">
+                    <div class="tst-cntn text-center">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries.
+                      </p>
+                      <div class="author">William Charls</div>
+                      <div class="desc">Interior Designer</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide tst-sec-slide">
+                    <div class="tst-cntn text-center">
+                      <p>
+                        Design is not just what it looks like and feels like.
+                        Design is how it works. Every space tells a story, and
+                        great design turns that story into an experience.
+                      </p>
+                      <div class="author">Sophia Martinez</div>
+                      <div class="desc">Creative Interior Architect</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide tst-sec-slide">
+                    <div class="tst-cntn text-center">
+                      <p>
+                        A well-designed interior creates harmony, balance, and a
+                        sense of belonging. When aesthetics meet comfort, a
+                        space becomes truly unforgettable.
+                      </p>
+                      <div class="author">Daniel Foster</div>
+                      <div class="desc">Luxury Interior Designer</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide tst-sec-slide">
+                    <div class="tst-cntn text-center">
+                      <p>
+                        The beauty of interior design lies in transforming empty
+                        spaces into meaningful environments. Every color,
+                        texture, and detail plays a part in shaping emotions.
+                      </p>
+                      <div class="author">Emily Carter</div>
+                      <div class="desc">Modern Space Stylist</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide tst-sec-slide">
+                    <div class="tst-cntn text-center">
+                      <p>
+                        Great interiors don’t happen by chance—they are the
+                        result of thoughtful planning and a deep understanding
+                        of how people interact with their surroundings.
+                      </p>
+                      <div class="author">Jonathan Reed</div>
+                      <div class="desc">Contemporary Interior Expert</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Communication Section -->
+        <section
+          class="comm-sec"
+          data-aos="zoom-in"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <div class="container">
+            <div class="comm-wrpr">
+              <div
+                class="comm-cntn d-flex flex-column flex-lg-row justify-content-between"
+              >
+                <div class="com-lft">
+                  <div class="heading-top">
+                    Solutions
+                    <svg
+                      width="24"
+                      height="8"
+                      viewBox="0 0 24 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M23.8536 4.03553C24.0488 3.84027 24.0488 3.52369 23.8536 3.32843L20.6716 0.146446C20.4763 -0.0488162 20.1597 -0.0488163 19.9645 0.146446C19.7692 0.341708 19.7692 0.658291 19.9645 0.853553L22.7929 3.68198L19.9645 6.51041C19.7692 6.70567 19.7692 7.02225 19.9645 7.21751C20.1597 7.41278 20.4763 7.41278 20.6716 7.21751L23.8536 4.03553ZM23.5 3.68198L23.5 3.18198L4.37114e-08 3.18198L0 3.68198L-4.37114e-08 4.18198L23.5 4.18198L23.5 3.68198Z"
+                        fill="#fff"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="title2 text-white">Streamline communications</h2>
+                </div>
+                <div class="com-right">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an.
+                  </p>
+                  <a href="" class="btn-secondary btn"
+                    >Post your Job Now
+
+                    <svg
+                      width="24"
+                      height="8"
+                      viewBox="0 0 24 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M23.8536 4.03556C24.0488 3.8403 24.0488 3.52372 23.8536 3.32845L20.6716 0.146473C20.4763 -0.0487895 20.1597 -0.0487896 19.9645 0.146473C19.7692 0.341735 19.7692 0.658317 19.9645 0.853579L22.7929 3.68201L19.9645 6.51043C19.7692 6.7057 19.7692 7.02228 19.9645 7.21754C20.1597 7.4128 20.4763 7.4128 20.6716 7.21754L23.8536 4.03556ZM23.5 3.68201L23.5 3.18201L4.37114e-08 3.182L0 3.682L-4.37114e-08 4.182L23.5 4.18201L23.5 3.68201Z"
+                        fill="#3F543E"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Footer Section -->
+      <footer class="ftr-sec">
+        <div class="container">
+          <div class="ftr-top">
+            <div class="row">
+              <div class="col-12 col-sm-3">
+                <div class="ftr-left">
+                  <div class="ftr-logo">
+                    <a href="index.html"
+                      ><img src="./assets/Footer-log.png" alt=""
+                    /></a>
+                  </div>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-3">
+                <div class="ftr-list1">
+                  <div class="ftr-list-hdr">Quick links</div>
+                  <ul class="list-unstyled">
+                    <li><a href="" class="ftr-links">About Us</a></li>
+                    <li><a href="" class="ftr-links">Freelancers</a></li>
+                    <li><a href="" class="ftr-links">Contact Us</a></li>
+                    <li><a href="" class="ftr-links">Post A Job</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-sm-3">
+                <div class="ftr-list2">
+                  <div class="ftr-list-hdr">Additional links</div>
+                  <ul class="list-unstyled">
+                    <li><a href="" class="ftr-links">Terms & Conditions</a></li>
+                    <li><a href="" class="ftr-links">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-sm-3">
+                <div class="ftr-list3">
+                  <div class="ftr-list-hdr">Follow Us</div>
+                  <ul class="list-unstyled d-flex align-items-center">
+                    <li>
+                      <a href="" class="scl-links">
+                        <svg
+                          width="10"
+                          height="18"
+                          viewBox="0 0 10 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.2755 4.46162V6.92232H9.37484L8.94095 10.2879H6.2755V18H2.89506V10.2879H0V6.92232H2.89506V4.46162C2.89506 1.79755 5.05063 0 7.7169 0C8.89029 0 9.62979 0.178857 9.62979 0.178857V3.02178H7.7169C6.92593 3.02178 6.2755 3.67187 6.2755 4.46162Z"
+                            fill="#3F543E"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="scl-links">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M3.90828 17.4609H0.27358V5.78125H3.90828V17.4609ZM2.07139 4.21875C0.937988 4.21875 0 3.24219 0 2.07031C0 0.9375 0.937988 0 2.07139 0C3.24388 0 4.18186 0.9375 4.18186 2.07031C4.18186 3.24219 3.24388 4.21875 2.07139 4.21875ZM17.47 17.4609H13.8744V11.7969C13.8744 10.4297 13.8353 8.71094 11.9594 8.71094C10.0834 8.71094 9.80979 10.1562 9.80979 11.6797V17.4609H6.17509V5.78125H9.65346V7.38281H9.69255C10.2006 6.48438 11.3731 5.50781 13.1318 5.50781C16.8056 5.50781 17.5091 7.92969 17.5091 11.0547V17.4609H17.47Z"
+                            fill="#3F543E"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="scl-links">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.00469 0C6.56104 0 6.25376 0.01125 5.29363 0.054C4.33351 0.099 3.67954 0.24975 3.10662 0.4725C2.50566 0.698421 1.96132 1.0528 1.51166 1.51088C1.05363 1.96053 0.69911 2.50452 0.472746 3.105C0.24988 3.6765 0.097926 4.33125 0.0540281 5.2875C0.0112559 6.24937 0 6.55538 0 9.00113C0 11.4446 0.0112559 11.7506 0.0540281 12.7103C0.0990516 13.6688 0.24988 14.3224 0.472746 14.895C0.703491 15.4867 1.01078 15.9885 1.51166 16.4891C2.01142 16.9897 2.51343 17.298 3.10549 17.5275C3.67954 17.7502 4.33238 17.9021 5.29138 17.946C6.25263 17.9888 6.55879 18 9.00469 18C11.4506 18 11.7556 17.9888 12.7169 17.946C13.6747 17.901 14.331 17.7502 14.9039 17.5275C15.5045 17.3015 16.0484 16.9471 16.4977 16.4891C16.9986 15.9885 17.3059 15.4867 17.5366 14.895C17.7584 14.3224 17.9103 13.6688 17.9553 12.7103C17.9981 11.7506 18.0094 11.4446 18.0094 9C18.0094 6.55538 17.9981 6.24938 17.9553 5.28863C17.9103 4.33125 17.7584 3.6765 17.5366 3.105C17.3103 2.5045 16.9558 1.96051 16.4977 1.51088C16.0482 1.05264 15.5038 0.698226 14.9028 0.4725C14.3287 0.24975 13.6736 0.097875 12.7157 0.054C11.7545 0.01125 11.4495 0 9.00244 0H9.00581H9.00469ZM8.19764 1.62225H9.00581C11.4101 1.62225 11.6948 1.63013 12.6437 1.674C13.5217 1.71338 13.9989 1.86075 14.3163 1.98338C14.7362 2.1465 15.0367 2.34225 15.3519 2.65725C15.667 2.97225 15.8618 3.2715 16.025 3.69225C16.1488 4.00838 16.2951 4.48538 16.3345 5.36287C16.3784 6.31125 16.3874 6.59588 16.3874 8.99775C16.3874 11.3996 16.3784 11.6854 16.3345 12.6337C16.2951 13.5112 16.1477 13.9871 16.025 14.3044C15.8806 14.6952 15.6502 15.0485 15.3507 15.3383C15.0356 15.6532 14.7362 15.8479 14.3152 16.011C14 16.1348 13.5228 16.281 12.6437 16.3215C11.6948 16.3643 11.4101 16.3744 9.00581 16.3744C6.60156 16.3744 6.31566 16.3643 5.36679 16.3215C4.48884 16.281 4.01271 16.1348 3.6953 16.011C3.30416 15.8669 2.9503 15.637 2.65976 15.3383C2.36007 15.048 2.1293 14.6944 1.98441 14.3032C1.86172 13.9871 1.71427 13.5101 1.67487 12.6326C1.6321 11.6842 1.62309 11.3996 1.62309 8.9955C1.62309 6.5925 1.6321 6.309 1.67487 5.36062C1.71539 4.48312 1.86172 4.00612 1.98553 3.68887C2.14874 3.26925 2.3446 2.96887 2.65976 2.65387C2.97492 2.33888 3.27433 2.14425 3.6953 1.98112C4.01271 1.85738 4.48884 1.71113 5.36679 1.67062C6.19748 1.63238 6.51939 1.62113 8.19764 1.62V1.62225ZM13.8121 3.11625C13.6702 3.11625 13.5297 3.14419 13.3986 3.19846C13.2675 3.25274 13.1483 3.33229 13.048 3.43257C12.9477 3.53286 12.8681 3.65192 12.8138 3.78295C12.7595 3.91398 12.7315 4.05442 12.7315 4.19625C12.7315 4.33808 12.7595 4.47852 12.8138 4.60955C12.8681 4.74058 12.9477 4.85964 13.048 4.95993C13.1483 5.06021 13.2675 5.13976 13.3986 5.19404C13.5297 5.24831 13.6702 5.27625 13.8121 5.27625C14.0986 5.27625 14.3735 5.16246 14.5761 4.95993C14.7788 4.75739 14.8926 4.48268 14.8926 4.19625C14.8926 3.90982 14.7788 3.63511 14.5761 3.43257C14.3735 3.23004 14.0986 3.11625 13.8121 3.11625ZM9.00581 4.3785C8.39245 4.36894 7.78331 4.48142 7.21386 4.70941C6.6444 4.9374 6.12602 5.27633 5.68888 5.70648C5.25174 6.13662 4.90459 6.64939 4.66763 7.21492C4.43066 7.78045 4.30863 8.38744 4.30863 9.00056C4.30863 9.61368 4.43066 10.2207 4.66763 10.7862C4.90459 11.3517 5.25174 11.8645 5.68888 12.2946C6.12602 12.7248 6.6444 13.0637 7.21386 13.2917C7.78331 13.5197 8.39245 13.6322 9.00581 13.6226C10.2198 13.6037 11.3777 13.1084 12.2295 12.2437C13.0813 11.3789 13.5587 10.2141 13.5587 9.00056C13.5587 7.78706 13.0813 6.62221 12.2295 5.75747C11.3777 4.89272 10.2198 4.39743 9.00581 4.3785ZM9.00581 5.99963C9.80198 5.99963 10.5655 6.31573 11.1285 6.87841C11.6915 7.44109 12.0078 8.20425 12.0078 9C12.0078 9.79575 11.6915 10.5589 11.1285 11.1216C10.5655 11.6843 9.80198 12.0004 9.00581 12.0004C8.20965 12.0004 7.44609 11.6843 6.88312 11.1216C6.32015 10.5589 6.00388 9.79575 6.00388 9C6.00388 8.20425 6.32015 7.44109 6.88312 6.87841C7.44609 6.31573 8.20965 5.99963 9.00581 5.99963Z"
+                            fill="#3F543E"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ftr-btm">
+            <div class="ftr-btm-wrpr text-center">
+              <p class="mb-0">
+                © 2025 <a href="">Uptra</a>. All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Swiper Js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- Aos Js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Luxy Js -->
+    <script src="dist/js/luxy.js" charset="utf-8"></script>
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Js -->
+    <script src="./script/script.js"></script>
+  </body>
+</html>
